@@ -1,10 +1,18 @@
 .Appcontainer{
   height: 100vh;
   width: auto;
-  background-color: white;
+  background-color: black;
   overflow: hidden;
   scrollbar-width: none;
   -ms-overflow-style: none;
+}
+.symbolContainer{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  color:white;
 }
 
 .Appcontainer::-webkit-scrollbar{

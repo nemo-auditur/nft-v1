@@ -1,26 +1,36 @@
 import React from "react";
 import "./App.css";
 import Countdown from "react-countdown";
-import secondsDisplay from "./lib/seconds";
-
+import symbolDisplay from "./symbolDisplay";
 function App() {
   type Props = {
+    days: number;
     hours: number;
     minutes: number;
     seconds: number;
     completed: boolean;
   };
 
+  let date = new Date();
+  date.setDate(date.getDate() + 2);
+
   // Renderer callback with condition
-  const renderer = ({ hours, minutes, seconds, completed }: Props) => {
-    secondsDisplay(seconds);
+  const renderer = ({ days, hours, minutes, seconds }: Props) => {
+    symbolDisplay(seconds);
     // Render a countdown
-    return <span>{secondsDisplay(seconds)}</span>;
+    return (
+      <div className="symbolContainer">
+        <span>{symbolDisplay(days)}</span>
+        <span>{symbolDisplay(hours)}</span>
+        <span>{symbolDisplay(minutes)}</span>
+        <span>{symbolDisplay(seconds)}</span>
+      </div>
+    );
   };
 
   return (
     <div className="Appcontainer">
-      <Countdown date={Date.now() + 13000} renderer={renderer} />
+      <Countdown date={date} renderer={renderer} />
     </div>
   );
 }
