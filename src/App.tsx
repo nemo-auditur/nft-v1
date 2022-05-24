@@ -1,24 +1,26 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import Countdown from "react-countdown";
+import secondsDisplay from "./lib/seconds";
 
 function App() {
+  type Props = {
+    hours: number;
+    minutes: number;
+    seconds: number;
+    completed: boolean;
+  };
+
+  // Renderer callback with condition
+  const renderer = ({ hours, minutes, seconds, completed }: Props) => {
+    secondsDisplay(seconds);
+    // Render a countdown
+    return <span>{secondsDisplay(seconds)}</span>;
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="Appcontainer">
+      <Countdown date={Date.now() + 13000} renderer={renderer} />
     </div>
   );
 }
