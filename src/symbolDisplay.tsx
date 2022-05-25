@@ -10,66 +10,116 @@ import seventhChar from "./assets/7.png";
 import eighthCar from "./assets/8.png";
 import ninethChar from "./assets/9.png";
 
-const secondsUnitDisplay = (seconds: number) => {
-  switch (seconds) {
+const singleSymbolDisplay = (integer: number) => {
+  switch (integer) {
     case 0:
       return (
         <div>
-          <img src={zeroChar} height="100px" width="100px" alt="" />
+          <img
+            alt="A strange symbol..."
+            src={zeroChar}
+            height="100px"
+            width="100px"
+          />
         </div>
       );
     case 1:
       return (
         <div>
-          <img src={firstChar} height="100px" width="100px" alt="" />
+          <img
+            alt="A strange symbol..."
+            src={firstChar}
+            height="100px"
+            width="100px"
+          />
         </div>
       );
     case 2:
       return (
         <div>
-          <img src={secondChar} height="100px" width="100px" alt="" />
+          <img
+            alt="A strange symbol..."
+            src={secondChar}
+            height="100px"
+            width="100px"
+          />
         </div>
       );
     case 3:
       return (
         <div>
-          <img src={thirdChar} height="100px" width="100px" alt="" />
+          <img
+            alt="A strange symbol..."
+            src={thirdChar}
+            height="100px"
+            width="100px"
+          />
         </div>
       );
     case 4:
       return (
         <div>
-          <img src={fourthChar} height="100px" width="100px" alt="" />
+          <img
+            alt="A strange symbol..."
+            src={fourthChar}
+            height="100px"
+            width="100px"
+          />
         </div>
       );
     case 5:
       return (
         <div>
-          <img src={fithChar} height="100px" width="100px" alt="" />
+          <img
+            alt="A strange symbol..."
+            src={fithChar}
+            height="100px"
+            width="100px"
+          />
         </div>
       );
     case 6:
       return (
         <div>
-          <img src={sixthChar} height="100px" width="100px" alt="" />
+          <img
+            alt="A strange symbol..."
+            src={sixthChar}
+            height="100px"
+            width="100px"
+          />
         </div>
       );
     case 7:
       return (
         <div>
-          <img src={seventhChar} height="100px" width="100px" alt="" />
+          <img
+            alt="A strange symbol..."
+            src={seventhChar}
+            height="100px"
+            width="100px"
+          />
         </div>
       );
     case 8:
       return (
         <div>
-          <img src={eighthCar} height="100px" width="100px" alt="" />
+          <img
+            alt="A strange symbol..."
+            src={eighthCar}
+            height="100px"
+            width="100px"
+          />
         </div>
       );
     case 9:
       return (
         <div>
-          <img src={ninethChar} height="100px" width="100px" alt="" />
+          <img
+            alt="A strange symbol..."
+            src={ninethChar}
+            height="100px"
+            width="100px"
+          />
         </div>
       );
     default:
@@ -77,14 +127,14 @@ const secondsUnitDisplay = (seconds: number) => {
   }
 };
 
-const symbolDisplay = (seconds: number) => {
-  let secondsToString = seconds.toString();
-  let secondsTens = parseInt(secondsToString.charAt(0));
-  let secondsUnits = parseInt(secondsToString.charAt(1));
-  console.log("test", seconds);
+const symbolDisplay = (integer: number) => {
+  let integerToString: string = integer.toString();
+  let integerTens: number = parseInt(integerToString.charAt(0));
+  let integerUnits: number = parseInt(integerToString.charAt(1));
+
   return (
     <div style={{ display: "flex", flexDirection: "row" }}>
-      {seconds.toString().length < 2 ? (
+      {integer.toString().length < 2 ? (
         <>
           <img
             src={zeroChar}
@@ -92,12 +142,12 @@ const symbolDisplay = (seconds: number) => {
             height="100px"
             width="100px"
           />
-          <div>{secondsUnitDisplay(seconds)}</div>
+          <div>{singleSymbolDisplay(integer)}</div>
         </>
       ) : (
         <>
-          <div>{secondsUnitDisplay(secondsTens)}</div>
-          <div>{secondsUnitDisplay(secondsUnits)}</div>
+          <div>{singleSymbolDisplay(integerTens)}</div>
+          <div>{singleSymbolDisplay(integerUnits)}</div>
         </>
       )}
     </div>

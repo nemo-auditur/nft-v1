@@ -1,7 +1,8 @@
-import React from "react";
 import "./App.css";
 import Countdown from "react-countdown";
+import Spacer from "./Components/Spacer";
 import symbolDisplay from "./symbolDisplay";
+
 function App() {
   type Props = {
     days: number;
@@ -16,13 +17,15 @@ function App() {
 
   // Renderer callback with condition
   const renderer = ({ days, hours, minutes, seconds }: Props) => {
-    symbolDisplay(seconds);
     // Render a countdown
     return (
       <div className="symbolContainer">
         <span>{symbolDisplay(days)}</span>
+        <Spacer />
         <span>{symbolDisplay(hours)}</span>
+        <Spacer />
         <span>{symbolDisplay(minutes)}</span>
+        <Spacer />
         <span>{symbolDisplay(seconds)}</span>
       </div>
     );
