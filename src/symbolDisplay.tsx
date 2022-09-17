@@ -15,111 +15,61 @@ const singleSymbolDisplay = (integer: number) => {
     case 0:
       return (
         <div>
-          <img
-            alt="A strange symbol..."
-            src={zeroChar}
-            height="100px"
-            width="100px"
-          />
+          <img alt="A strange symbol..." src={zeroChar} width="75%" />;
         </div>
       );
     case 1:
       return (
         <div>
-          <img
-            alt="A strange symbol..."
-            src={firstChar}
-            height="100px"
-            width="100px"
-          />
+          <img alt="A strange symbol..." src={firstChar} width="75%" />
         </div>
       );
     case 2:
       return (
         <div>
-          <img
-            alt="A strange symbol..."
-            src={secondChar}
-            height="100px"
-            width="100px"
-          />
+          <img alt="A strange symbol..." src={secondChar} width="75%" />
         </div>
       );
     case 3:
       return (
         <div>
-          <img
-            alt="A strange symbol..."
-            src={thirdChar}
-            height="100px"
-            width="100px"
-          />
+          <img alt="A strange symbol..." src={thirdChar} width="75%" />
         </div>
       );
     case 4:
       return (
         <div>
-          <img
-            alt="A strange symbol..."
-            src={fourthChar}
-            height="100px"
-            width="100px"
-          />
+          <img alt="A strange symbol..." src={fourthChar} width="75%" />
         </div>
       );
     case 5:
       return (
         <div>
-          <img
-            alt="A strange symbol..."
-            src={fithChar}
-            height="100px"
-            width="100px"
-          />
+          <img alt="A strange symbol..." src={fithChar} width="75%" />
         </div>
       );
     case 6:
       return (
         <div>
-          <img
-            alt="A strange symbol..."
-            src={sixthChar}
-            height="100px"
-            width="100px"
-          />
+          <img alt="A strange symbol..." src={sixthChar} width="75%" />
         </div>
       );
     case 7:
       return (
         <div>
-          <img
-            alt="A strange symbol..."
-            src={seventhChar}
-            height="100px"
-            width="100px"
-          />
+          <img alt="A strange symbol..." src={seventhChar} width="75%" />
         </div>
       );
     case 8:
       return (
         <div>
-          <img
-            alt="A strange symbol..."
-            src={eighthCar}
-            height="100px"
-            width="100px"
-          />
+          <img alt="A strange symbol..." src={eighthCar} width="75%" />
         </div>
       );
     case 9:
       return (
         <div>
-          <img
-            alt="A strange symbol..."
-            src={ninethChar}
-            height="100px"
-            width="100px"
-          />
+          <img alt="A strange symbol..." src={ninethChar} width="75%" />
         </div>
       );
     default:
@@ -136,18 +86,15 @@ const symbolDisplay = (integer: number) => {
     <div style={{ display: "flex", flexDirection: "row" }}>
       {integer.toString().length < 2 ? (
         <>
-          <img
-            src={zeroChar}
-            alt="A strange symbol..."
-            height="100px"
-            width="100px"
-          />
-          <div>{singleSymbolDisplay(integer)}</div>
+          <div>
+            <img src={zeroChar} alt="A strange symbol..." width="75%" />
+          </div>
+          {singleSymbolDisplay(integer)}
         </>
       ) : (
         <>
-          <div>{singleSymbolDisplay(integerTens)}</div>
-          <div>{singleSymbolDisplay(integerUnits)}</div>
+          {singleSymbolDisplay(integerTens)}
+          {singleSymbolDisplay(integerUnits)}
         </>
       )}
     </div>
