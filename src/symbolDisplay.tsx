@@ -87,7 +87,12 @@ const symbolDisplay = (integer: number) => {
       {integer.toString().length < 2 ? (
         <>
           <div>
-            <img src={zeroChar} alt="A strange symbol..." width="75%" />
+            <img
+              className="symbols"
+              src={zeroChar}
+              alt="A strange symbol..."
+              width="75%"
+            />
           </div>
           {singleSymbolDisplay(integer)}
         </>

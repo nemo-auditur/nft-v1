@@ -7,7 +7,25 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  background: url(assets/nft_bg_mobile.png) no-repeat fixed; 
+  background-position: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
+
+@media only screen and (min-width: 821px) {
+  .Appcontainer{
+    background: url(assets/nft_bg_desktop.png) no-repeat fixed;
+    background-position: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+}
+
 .symbolContainer{
   display: flex;
   color: black;
