@@ -15,7 +15,7 @@ const singleSymbolDisplay = (integer: number) => {
     case 0:
       return (
         <div>
-          <img alt="A strange symbol..." src={zeroChar} width="75%" />;
+          <img alt="A strange symbol..." src={zeroChar} width="75%" />
         </div>
       );
     case 1:

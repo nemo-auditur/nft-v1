@@ -14,7 +14,7 @@ const App = () => {
   };
 
   let date: Date = new Date();
-  date.setDate(date.getDate() + 2);
+  date.setMinutes(date.getMinutes() + 1);
 
   const [displayLanding, setDisplayLanding] = useState<boolean>(false);
 
@@ -30,18 +30,23 @@ const App = () => {
       </div>
     );
   };
-  console.log(displayLanding);
+
   return (
-    <div>
-      <button onClick={() => setDisplayLanding(!displayLanding)} />
+    <>
       {!displayLanding ? (
-        <div className="Appcontainer">
-          <Countdown date={date} renderer={renderer} />
+        <div className="CountdownContainer">
+          <Countdown
+            date={date}
+            renderer={renderer}
+            onComplete={() =>
+              setDisplayLanding((displayLanding) => !displayLanding)
+            }
+          />
         </div>
       ) : (
         <LandingPage />
       )}
-    </div>
+    </>
   );
 };
 

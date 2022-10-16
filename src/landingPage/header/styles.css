@@ -1,0 +1,43 @@
+.headerContainer{
+display: flex;
+justify-content: center;
+align-items: center;
+height: 10%;
+background: rgba(0 ,0,0, 0.7);
+}
+
+.gemmeImg {
+  height: 60px;
+  width: 60px;
+}
+
+.titleImg {
+  max-width: 100%;
+}
+
+@media only screen and (min-width: 821px) {
+  .headerContainer{
+    height: 20%;
+    background: rgba(0 ,0,0, 0.7);
+  }
+  .gemmeImg {
+    position: absolute;
+    left: 2%;
+    top: 2%;
+    height: 200px;
+    width: 200px;
+  }
+  .titleContainer {
+    max-width: 80%;
+  }
+  .titleImg {
+    max-width: 100%;
+  }
+}
+
+
+.gemmeImg:hover {
+  -webkit-filter: drop-shadow(5px 5px 10px white);
+  filter: drop-shadow(5px 5px 5px white);
+}
+

@@ -1,4 +1,4 @@
-.Appcontainer{
+.CountdownContainer{
   width: auto;
   overflow: hidden;
   scrollbar-width: none;
@@ -15,21 +15,11 @@
   background-size: cover;
 }
 
-@media only screen and (min-width: 821px) {
-  .Appcontainer{
-    background: url(assets/nft_bg_desktop.png) no-repeat fixed;
-    background-position: center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-  }
-}
-
 .symbolContainer{
   display: flex;
   color: black;
   align-items: center;
+  width: 80%;
 }
 
 .symbolContainer span:not(:first-child) {
@@ -37,9 +27,27 @@
 }
 
 .symbolContainer span:not(:last-child) {
-  border-right: 1px solid white;
+  border-right: 1px solid black;
 }
 
-.Appcontainer::-webkit-scrollbar{
+.CountdownContainer::-webkit-scrollbar{
   display: none;
+}
+
+@media only screen and (min-width: 821px) {
+  .CountdownContainer{
+    background: url(assets/nft_bg_desktop.png) no-repeat fixed;
+    background-position: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+
+  .symbolContainer{
+    display: flex;
+    color: black;
+    align-items: center;
+    width: 60%;
+  }
 }
