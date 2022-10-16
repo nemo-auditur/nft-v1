@@ -13,6 +13,8 @@
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  animation-name: display;
+  animation-duration: 5s;
 }
 
 .symbolContainer{
@@ -42,6 +44,8 @@
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    animation-name: display;
+    animation-duration: 5s;
   }
 
   .symbolContainer{
@@ -51,3 +55,12 @@
     width: 60%;
   }
 }
+
+  @keyframes display {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }

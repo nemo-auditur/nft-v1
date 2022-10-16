@@ -6,6 +6,8 @@
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    animation-name: display;
+    animation-duration: 5s;
 }
 
 @media only screen and (min-width: 821px) {
@@ -17,4 +19,13 @@
       -o-background-size: cover;
       background-size: cover;
     }
+}
+
+@keyframes display {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
