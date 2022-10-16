@@ -23,7 +23,7 @@ background: rgba(0 ,0,0, 0.7);
   .gemmeImg {
     position: absolute;
     left: 2%;
-    top: 2%;
+    top: 0;
     height: 200px;
     width: 200px;
   }
